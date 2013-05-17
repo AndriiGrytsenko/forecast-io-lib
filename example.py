@@ -7,7 +7,7 @@ apikey = '6161e86a8c982e4ee06b622146a826cc'
 """
 EXAMPLE 1 
 
-Ouput temperature time humidity windSpeed summary for list of cities
+Output temperature time humidity windSpeed summary for list of cities
 
 """
 
@@ -93,7 +93,7 @@ def example3(apikey):
 
   data = weather.result
 
-  print("Sunrise in %s was at %s. Day maximum: %.2fC. Day minimum %.2fC. Summary %s" % (
+  print("Sunrise in %s was at %s. Day maximum: %.2fC. Day minimum %.2fC. Summary: %s" % (
       city, 
       time.strftime("%H:%M:%S", time.localtime(int(data['sunriseTime']))), 
       data['temperatureMax'],
@@ -101,6 +101,12 @@ def example3(apikey):
       data['summary']
       )
   )
+
+"""
+Output:
+
+Sunrise in Los Angeles, CA was at 14:51:49. Day maximum: 22.03C. Day minimum 13.87C. Summary: Mostly cloudy throughout the day.
+"""
 
 if __name__ == "__main__":
   print('This is just example')
